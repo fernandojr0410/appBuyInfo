@@ -25,7 +25,7 @@ export const Login = ({ navigation }: any) => {
             />
           </View>
 
-          <View>
+          <View style={defaultStyles.input}>
             <TextInput
               label="Email"
               value={email}
@@ -74,7 +74,7 @@ export const Login = ({ navigation }: any) => {
               source={require("../../assets/avatar.png")}
             />
           </View>
-          <View>
+          <View style={defaultStyles.input}>
             <TextInput
               label="Nome"
               value={name}

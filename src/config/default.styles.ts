@@ -3,8 +3,8 @@ import {StyleSheet } from "react-native";
 export const defaultStyles = StyleSheet.create({
     container: {
       flex: 1,
-      paddingLeft: 15,
-      paddingRight: 15,
+      // paddingLeft: 15,
+      // paddingRight: 15,
       paddingTop: 45,
       paddingBottom: 80,
     },
@@ -14,4 +14,7 @@ export const defaultStyles = StyleSheet.create({
       alignItems: "center",
       padding: 20,
     },
+    input: {
+      width: "80%"
+    }
   });
