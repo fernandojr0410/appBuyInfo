@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { Avatar, Button, Card, IconButton, Text } from "react-native-paper";
+import { Api } from "../../services/api";
 
 const ListProducts = ({ lstProdutos }: any) => {
   return lstProdutos.map((produto: any) => {
@@ -11,7 +12,17 @@ const ListProducts = ({ lstProdutos }: any) => {
         </Card.Content>
         <Card.Actions>
           <Button>Editar</Button>
-          <Button>Deletar</Button>
+          <Button onPress={() => {
+            console.log("Deletar produto ID:", produto.id_produto);
+            Api.deleteById(produto.id_produto)
+              .then(() => {
+                console.log("Produto deletado com sucesso!");
+              })
+              .catch((error) => console.error(error));
+          }}>Deletar</Button>
+
+
+
         </Card.Actions>
       </Card>
     );
