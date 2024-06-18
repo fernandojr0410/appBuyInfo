@@ -4,7 +4,7 @@ export class Api {
     constructor() {
 
     }
-    private static API_URL: string = 'http://10.47.0.89:5000'
+    private static API_URL: string = 'http://192.168.1.19:5000'
 
     static async getAllProductsByVendor(): Promise<any> {
         const products: any[] = []
@@ -17,6 +17,7 @@ export class Api {
             .then((response) => response.json())
             .then((data) => {
                 data.forEach((produto: any) => products.push(produto))
+                console.log("produto", data)
             })
             .catch((error) => console.error(error))
         return products
